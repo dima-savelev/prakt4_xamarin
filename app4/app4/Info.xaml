@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app4.Info" Title="Справка">
+    <ContentPage.Content>
+        <Grid>
+            <Label Text="Савельев Дмитрий Александрович, ИСП-41, В13" HorizontalOptions="Center" FontSize="17" Margin="0,10,0,0"/>
+            <Label Text="Предоставьте пользователю возможность выбора страны и выведите ее столицу." Margin="10,40,0,0" FontSize="17" HorizontalTextAlignment="Center"/>
+            <Image Source="mem.jpg"></Image>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app4.Page2" Title="Задание №2">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Выберите страну:" FontSize="25" Margin="10,10,0,0"></Label>
+            <StackLayout x:Name="group1" IsEnabled="False">
+                <StackLayout.Resources>
+                    <Style TargetType="RadioButton">
+                        <Setter Property="IsEnabled" Value="{Binding IsEnabled, Source={Reference group1}}"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="Margin" Value="3,0,0,0"/>
+                    </Style>
+                </StackLayout.Resources>
+                <RadioButton Content="Австрия" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Болгария" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Греция" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Италия" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Норвегия" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Польша" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Франция" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Испания" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+            </StackLayout>
+            <Label Text="Столица:" x:Name="country" FontSize="25" Margin="10,0,0,0"></Label>
+            <Button Text="Определить столицу" Clicked="Button_Clicked" x:Name="countryButton" IsEnabled="False" Margin="10,10,10,0" CornerRadius="15"></Button>
+            <Switch IsToggled="False" Toggled="Switch_Toggled" x:Name="switchToggle" HorizontalOptions="Start" Margin="5,10,0,0"></Switch>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
